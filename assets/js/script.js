@@ -1,7 +1,7 @@
 // Smooth-scroll is via CSS. Set dynamic links and last-updated date.
 document.addEventListener('DOMContentLoaded', () => {
   // Placeholders — update these with your real links
-  const githubUrl = 'https://github.com'; // TODO
+  const githubUrl = 'https://github.com/emireroglu2k/Mootion';
 
   const g1 = document.getElementById('githubLink');
   const g2 = document.getElementById('githubLink2');
@@ -17,4 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
       span.textContent = fmt.format(now).replace(/ /g, '-');
     }
   } catch(e) {}
+
+  // Mobile menu toggle functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  }
 });
